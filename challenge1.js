@@ -110,10 +110,125 @@ console.log (sum)
 // 7. Calculer la moyenne:
 
 // A: .reduce()
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+const sum = data.reduce((total, num) => total + num, 0)
+const average = sum / data.length;
+console.log(average);
 
 //  B: boucle
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+let sum = 0;
+
+for (let i = 0; i < data.length; i++){
+    sum = sum + data[i];
+}
+let average  = sum / data.length;
+console.log(average);
+
+// 8. Trouver un nombre donné (ex : 77) :
+
+// A: .includes() ou .find()
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+const found = data.includes(77);
+console.log(found);
+
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+const found = data.find( num => num === 77);
+console.log(found)
 
 
 
+//  B: boucle + condition
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+let found = false ;
+for (let i= 0; i < data.length; i++){
+    if (data[i] === 77){
+        found = true
+        break;
+    }
+}
+console.log(found)
+
+// 9. Récupérer les nombres supérieurs à 20 :
+
+// A: .filter()
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+const supnum = data.filter(num => num > 20);
+console.log(supnum);
+
+//  B: boucle
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+const supnum = [];
+for (let i = 0; i < data.length; i++){
+    if ( data[i] > 20){
+        supnum.push(data[i]);
+    }
+}
+console.log(supnum);
 
 
+// 10. Vérifier si tous les nombres sont positifs :
+
+// A: .every()
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+const posnumb = data.every(num => num > 0);
+console.log(posnumb)
+
+//  B: boucle
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+let posnumb = false;
+
+for (let i= 0; i < data.length; i++){
+    if (data[i] >= 0){
+        posnumb = true;
+        break;
+    }
+}
+
+console.log(posnumb)
+
+// 11. Vérifier si au moins un nombre est supérieur à 100 :
+
+// A: .some()
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+const supnum = data.some(num => num > 100)
+console.log (supnum)
+
+//  B: boucle
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+const supnum = [];
+
+for (let i = 0; i < data.length; i++){
+    if (data[i] > 100){
+    supnum.push(data[i])
+    }
+}
+console.log(supnum);
+// 2 ème methode :
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+let supnum = false;
+
+for (let i = 0; i < data.length; i++){
+    if (data[i] > 100){
+        supnum = true;
+        break;
+    }
+}
+console.log (supnum)
+
+// 12. Compter combien de nombres sont > 50 :
+
+// A: .filter().length
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+const count = data.filter(num => num > 50).length;
+console.log (count);
+
+//  B: boucle + compteur
+const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
+let count = 0
+for (let i = 0; i < data.length; i++){
+    if (data[i] > 50){
+        count ++;
+    }
+}
+console.log (count);
