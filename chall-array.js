@@ -6,7 +6,6 @@ const numbers = data.filter (num => num %2 === 0);
 console.log(numbers);
 
 //  B: avec boucle for
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const numbers = [];
 
 for (let i = 0; i < data.length; i++ ){
@@ -21,12 +20,10 @@ console.log(numbers)
 // 2. Récupérer tous les nombres impairs:
 
 // A: avec .filter()
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const evennumbers = data.filter(num => num %2 === 1);
 console.log(evennumbers)
 
 //  B: avec boucle for
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const evennumbers = [];
 
 for (let i = 0; i < data.length; i++){
@@ -40,12 +37,10 @@ console.log (evennumbers)
 // 3. Doubler chaque nombre du tableau:
 
 // A: .map()
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const doublenumbers = data.map( num => num * 2);
 console.log (doublenumbers);
 
 //  B: boucle
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const doublenumbers = [];
 
 for (let i = 0; i < data.length; i++){
@@ -57,12 +52,10 @@ console.log (doublenumbers);
 // 4. Trouver le plus grand nombre :
 
 // A: Math.max(...data) ou .reduce()
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const maxnumber = Math.max(...data);
 console.log(maxnumber);
 
 //  B: boucle + comparaison
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 let maxnumber = data [0];
 
 for ( let i = 0; i < data.length; i++ ){
@@ -75,12 +68,10 @@ console.log(maxnumber);
 // 5. Trouver le plus petit nombre :
 
 // A: Math.min(...) ou .reduce()
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const minnumbers = Math.min(...data);
 console.log(minnumbers);
 
 //  B: boucle
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 let minnumbers = data[0];
 
 for ( let i = 0; i < data.length; i++){
@@ -93,12 +84,10 @@ console.log (minnumbers);
 // 6. Calculer la somme du tableau :
 
 // A: .reduce()
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const sum = data.reduce ((somme, num) => somme + num, 0);
 console.log (sum)
 
 //  B: boucle
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 let sum = 0;
 
 for (let i = 0; i < data.length; i++ ){
@@ -110,13 +99,11 @@ console.log (sum)
 // 7. Calculer la moyenne:
 
 // A: .reduce()
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const sum = data.reduce((total, num) => total + num, 0)
 const average = sum / data.length;
 console.log(average);
 
 //  B: boucle
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 let sum = 0;
 
 for (let i = 0; i < data.length; i++){
@@ -128,18 +115,15 @@ console.log(average);
 // 8. Trouver un nombre donné (ex : 77) :
 
 // A: .includes() ou .find()
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const found = data.includes(77);
 console.log(found);
 
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const found = data.find( num => num === 77);
 console.log(found)
 
 
 
 //  B: boucle + condition
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 let found = false ;
 for (let i= 0; i < data.length; i++){
     if (data[i] === 77){
@@ -152,12 +136,10 @@ console.log(found)
 // 9. Récupérer les nombres supérieurs à 20 :
 
 // A: .filter()
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const supnum = data.filter(num => num > 20);
 console.log(supnum);
 
 //  B: boucle
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const supnum = [];
 for (let i = 0; i < data.length; i++){
     if ( data[i] > 20){
@@ -170,12 +152,10 @@ console.log(supnum);
 // 10. Vérifier si tous les nombres sont positifs :
 
 // A: .every()
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const posnumb = data.every(num => num > 0);
 console.log(posnumb)
 
 //  B: boucle
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 let posnumb = false;
 
 for (let i= 0; i < data.length; i++){
@@ -190,12 +170,10 @@ console.log(posnumb)
 // 11. Vérifier si au moins un nombre est supérieur à 100 :
 
 // A: .some()
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const supnum = data.some(num => num > 100)
 console.log (supnum)
 
 //  B: boucle
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const supnum = [];
 
 for (let i = 0; i < data.length; i++){
@@ -205,7 +183,6 @@ for (let i = 0; i < data.length; i++){
 }
 console.log(supnum);
 // 2 ème methode :
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 let supnum = false;
 
 for (let i = 0; i < data.length; i++){
@@ -219,7 +196,6 @@ console.log (supnum)
 // 12. Compter combien de nombres sont > 50 :
 
 // A: .filter().length
-const data = [12, 5, 8, 130, 44, 9, 2, 77, 21, 56, 3, 99, 14, 28, 1, 65, 7, 38, 11, 50];
 const count = data.filter(num => num > 50).length;
 console.log (count);
 
